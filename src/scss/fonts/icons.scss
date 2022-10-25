@@ -14,3 +14,22 @@
 		display: block;
 	}
 }
+
+._icon-clip:before {
+  content: "\e900";
+}
+._icon-arrowR:before {
+  content: "\e901";
+}
+._icon-Github:before {
+  content: "\e903";
+}
+._icon-Instagram:before {
+  content: "\e905";
+}
+._icon-Linkedin:before {
+  content: "\e906";
+}
+._icon-Twitter:before {
+  content: "\e90b";
+}
