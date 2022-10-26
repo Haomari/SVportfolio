@@ -1,4 +1,65 @@
 //====================================================================================================
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+		gap: rem(15);
+		min-height: rem(123);
+		@include adaptiveValue("font-size", , );
+  }
+
+  &__logo {
+    @include adaptiveValue("width", 114, 60);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__actions {}
+
+  &__button {}
+}
+
+.menu {
+
+  &__icon {}
+
+  &__body {}
+
+  &__list {
+    display: flex;
+		flex-wrap: wrap;
+		row-gap: rem(5);
+    @include adaptiveValue("column-gap", 56, 15, 2, 1200, 768);
+  }
+
+  &__item {}
+
+  &__link {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 16, 8);
+    line-height: 1.18;
+    transition: color 0.3s ease 0s;
+
+    &:hover {
+      color: $purpleColor;
+    }
+  }
+}
+
+.icon-menu {}
 
 //====================================================================================================
 
