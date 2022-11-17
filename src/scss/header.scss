@@ -20,7 +20,7 @@
 
   &__logo {
     @include adaptiveValue("min-width", 114, 60);
-		z-index: 5;
+    z-index: 5;
 
     img {
       max-width: 100%;
@@ -43,23 +43,26 @@
     border-radius: rem(8);
     font-weight: 500;
     font-size: rem(14);
-		line-height: math.div(17 ,14);
-		z-index: 5;
+    line-height: math.div(17, 14);
+    z-index: 5;
     transition: border-color 0.3s ease 0s;
+		transition-property:color, border-color;
 
     &:hover {
       border-color: $purpleColor;
     }
 
-		@media (max-width:$mobile){
-			padding: rem(10) rem(15);
-			.menu-open & {
-				color: #fff;
-				&:hover{
-					border-color: $greyColor;
-				}
-			}
-		}
+    @media (max-width:$mobile) {
+      padding: rem(10) rem(15);
+
+      .menu-open & {
+				border-color: black;
+        &:hover {
+					color: #fff;
+          border-color: $greyColor;
+        }
+      }
+    }
   }
 }
 
@@ -72,47 +75,51 @@
       height: 100%;
       top: 0;
       left: -100%;
-			overflow: auto;
-			background-color: $purpleColor;
-			transition: left 0.3s ease 0s;
-			padding: rem(80) rem(15) rem(30) rem(15);
-			&::before {
-				content: "";
-				position: fixed;
-				top: 0;
-				left: -100%;
-				width: 100%;
-				height: rem(60);
-				background-color: $purpleColor;
-				z-index: 2;
-			}
+      overflow: auto;
+      background-color: $purpleColor;
+      transition: left 0.3s ease 0s;
+      padding: rem(80) rem(15) rem(30) rem(15);
 
-			.menu-open & {
-				left: 0;
-				&::before{
-					left: 0;
-				}
-			}
+      &::before {
+        content: "";
+        position: fixed;
+        transition: left 0.3s ease 0s;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: rem(60);
+        background-color: $purpleColor;
+        z-index: 2;
+      }
+
+      .menu-open & {
+        left: 0;
+
+        &::before {
+          left: 0;
+        }
+      }
     }
   }
 
   &__list {
-		@media (min-width:$mobile){
-			display: flex;
-			flex-wrap: wrap;
-			row-gap: rem(5);
-			@include adaptiveValue("column-gap", 56, 25, 2, 1200, 768);
-		}
+    @media (min-width:$mobile) {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: rem(5);
+      @include adaptiveValue("column-gap", 56, 25, 2, 1200, 768);
+    }
   }
 
   &__item {
-		text-align: center;
-		@media (max-width:$mobile){
-			&:not(:last-child) {
-				margin-bottom: rem(20);
-			}
-		}
-	}
+    text-align: center;
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+  }
 
   &__link {
     font-weight: 500;
@@ -124,13 +131,13 @@
       color: $purpleColor;
     }
 
-		@media (max-width:$mobile){
-			color: #fff;
-			font-size: rem(30);
-			&:hover{
-				color: $greyColor;
-			}
-		}
+    @media (max-width:$mobile) {
+      font-size: rem(30);
+
+      &:hover {
+        color: #fff;
+      }
+    }
   }
 }
 
