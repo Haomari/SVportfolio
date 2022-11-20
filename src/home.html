@@ -6,7 +6,7 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main data_fp class="page">
 				<section data_fp-section class="page__main main-section">
 					<div class="main-section__container">
 						<div class="main-section__content">
@@ -15,9 +15,17 @@
 								<h2 class="title__value title__value_big">Alex <span>Smith.</span></h2>
 							</div>
 							<div class="main-section__text text">Creative front-end developer with more than +5 years of experience in enterprise companies and startups. Proficient in JavaScript, Angular, and React. Passionate about UI/UX</div>
+							<div class="main-section__social social-main__section">
+								<a href="#" class="social-main-section__item _icon-Instagram"></a>
+								<a href="#" class="social-main-section__item _icon-Github"></a>
+								<a href="#" class="social-main-section__item _icon-Twitter"></a>
+								<a href="#" class="social-main-section__item _icon-Linkedin"></a>
+							</div>
 						</div>
 						<div class="main-section__image">
-							<img src="@img/main-section/man.png" alt="Man">
+							<div class="main-section__image-body">
+								<img src="@img/main-section/man.png" alt="Man">
+							</div>
 						</div>
 					</div>
 				</section>

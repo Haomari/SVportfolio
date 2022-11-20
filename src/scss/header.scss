@@ -12,6 +12,8 @@
     justify-content: space-between;
     gap: rem(15);
     min-height: 50px;
+		padding-top: rem(5);
+		padding-bottom: rem(5);
 
     @media (max-width:$mobile) {
       min-height: 50px;
@@ -140,8 +142,6 @@
     }
   }
 }
-
-.icon-menu {}
 
 //====================================================================================================
 
