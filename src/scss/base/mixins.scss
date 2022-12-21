@@ -54,6 +54,10 @@
 		$widthFrom: $maxWidth;
 	}
 
+	@if ($widthFrom == 0) {
+		$widthFrom: $maxWidthContainer;
+	}
+
 	// Брейк-поинты в EM
 	$widthFromMedia: em($widthFrom);
 	$widthToMedia: em($widthTo);

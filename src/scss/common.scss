@@ -7,6 +7,7 @@
 
 
 .text {
+	@include adaptiveValue("font-size", 16, 10);
   font-size: rem(16);
   line-height: math.div(32, 16);
 }
@@ -16,7 +17,8 @@
   &__label {
 		text-transform: uppercase;
     font-weight: 500;
-    font-size: rem(12);
+    @include adaptiveValue("font-size", 12, 9);
+		// @include adaptiveValue("line-height", math.div(24, 12), math.div(14, 12))
     line-height: math.div(24, 12);
     letter-spacing: em(7.5, 12);
     color: $greyColor;
@@ -39,11 +41,11 @@
   &__value {
     font-family: 'Plus Jakarta Sans';
     font-weight: 700;
-    font-size: rem(36);
+		@include adaptiveValue("font-size", 36, 20);
     line-height: math.div(45, 36);
 
 		&_big {
-			font-size: rem(44);
+			@include adaptiveValue("font-size", 44, 30);
 			line-height: math.div(55, 44);
 		}
 		span {
