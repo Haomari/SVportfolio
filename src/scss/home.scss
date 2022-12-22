@@ -20,14 +20,12 @@
   &__title {
     &:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 29, 20);
-      margin-bottom: rem(29);
     }
   }
 
   &__text {
     &:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 40, 31);
-      margin-bottom: rem(40);
     }
   }
 
@@ -99,5 +97,60 @@
 
 //====================================================================================================
 
+.service-section {
 
+	&__container {
+		
+	}
+
+	&__title {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: center;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		max-width: rem(294);
+		text-align: center;
+	}
+}
+
+.item-service {
+
+	&__icon {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
+
+	}
+
+	&__title {
+	font-family: 'Plus Jakarta Sans';
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 1.25;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 20, 14);
+	}
+
+	}
+
+	&__text {
+		font-size: rem(14);
+		line-height: 1.714285714285714;
+	}
+}
+
+//====================================================================================================
+//====================================================================================================
 

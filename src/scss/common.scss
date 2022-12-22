@@ -4,6 +4,12 @@
 		@include adaptiveValue("padding-top", 265, 100);
 		@include adaptiveValue("padding-bottom", 72, 45);/* +15px for purple decoration */
 	}
+
+		&__service {
+			@include adaptiveValue("padding-top", 72, 45);/* +15px for purple decoration */
+			@include adaptiveValue("padding-bottom", 72, 45);
+		}
+
 }
 
 
