@@ -1,10 +1,16 @@
 //====================================================================================================
+//====================================================================================================
 
 .main-section {
 
   &__container {
     display: flex;
     align-items: center;
+		gap: rem(30);
+		@media (max-width:$mobileSmall){
+			gap: rem(60);
+			flex-direction: column;
+		}
   }
 
   &__content {
@@ -13,13 +19,14 @@
 
   &__title {
     &:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 29, );
+			@include adaptiveValue("margin-bottom", 29, 20);
       margin-bottom: rem(29);
     }
   }
 
   &__text {
     &:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 31);
       margin-bottom: rem(40);
     }
   }
@@ -33,6 +40,7 @@
     display: flex;
     flex: 1 1 auto;
 		margin-right: rem(30);
+		@include adaptiveValue("margin-right", 30, 10, 0, 0, 479.98);
     justify-content: end;
     align-items: center;
     justify-items: start;
@@ -45,10 +53,8 @@
     background: #EAE6FE;
 		height: rem(400);
 		max-width: 100%;
-		@include adaptiveValue("height", 400, 333.33, 0, 0, 798);
-		@include adaptiveValue("width", 336, 280, 0, 0, 798);
-		@include adaptiveValue("height", 333.33, 273.81, 3, 767.98, 320);
-		@include adaptiveValue("width", 280, 230, 3, 767.98, 320);
+		@include adaptiveValue("height", 400, 238.1, 0, 0, 479.98);
+		@include adaptiveValue("width", 336, 200, 0, 0, 479.98);
 
     &::after {
 			content: '';
@@ -57,8 +63,8 @@
 			z-index: -1;
       width: rem(341);
       height: rem(398);
-			@include adaptiveValue("height", 400, 333.33, 0, 0, 798);
-			@include adaptiveValue("width", 336, 280, 0, 0, 798);
+			@include adaptiveValue("height", 400, 238.1, 0, 0, 479.98);
+			@include adaptiveValue("width", 336, 200, 0, 0, 479.98);
       background: #7E74F1;
       border-radius: rem(16);
       transform: rotate(-9.55deg);
@@ -82,6 +88,7 @@
 
   &__item {
     font-size: rem(24);
+		@include adaptiveValue("font-size", 24, 18);
     transition: color 0.3s ease 0s;
 
     &:hover {
@@ -91,3 +98,6 @@
 }
 
 //====================================================================================================
+
+
+

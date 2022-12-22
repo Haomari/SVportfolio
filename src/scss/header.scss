@@ -11,12 +11,12 @@
     align-items: center;
     justify-content: space-between;
     gap: rem(15);
-    min-height: 50px;
+    min-height: rem(50);
 		padding-top: rem(5);
 		padding-bottom: rem(5);
 
     @media (max-width:$mobile) {
-      min-height: 50px;
+      min-height: rem(50);
     }
   }
 
