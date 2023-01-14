@@ -12,8 +12,8 @@
     justify-content: space-between;
     gap: rem(15);
     min-height: rem(50);
-		padding-top: rem(5);
-		padding-bottom: rem(5);
+		@include adaptiveValue("padding-top", 37, 8);
+		@include adaptiveValue("padding-bottom", 37, 8);
 
     @media (max-width:$mobile) {
       min-height: rem(50);

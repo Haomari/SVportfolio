@@ -1,7 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 .page {
 	&__main {
-		@include adaptiveValue("padding-top", 265, 100);
+		@include adaptiveValue("padding-top", 289, 90);
 		@include adaptiveValue("padding-bottom", 72, 45);/* +15px for purple decoration */
 	}
 
