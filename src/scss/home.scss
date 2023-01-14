@@ -37,8 +37,9 @@
   &__image {
     display: flex;
     flex: 1 1 auto;
-		margin-right: rem(30);
 		@include adaptiveValue("margin-right", 30, 10, 0, 0, 479.98);
+		padding-bottom: rem(15);
+		padding-top: rem(15);
     justify-content: end;
     align-items: center;
     justify-items: start;
@@ -117,6 +118,11 @@
 	&__items {
 		display: flex;
 		justify-content: space-around;
+		gap: rem(30);
+		column-gap: rem(20);
+		@media (max-width:$mobile){
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
@@ -126,6 +132,12 @@
 		
 		max-width: rem(361);
 		text-align: center;
+		@media (max-width:$mobile){
+			flex: 1 1 40%;
+		}
+		@media (max-width:$mobileSmall){
+			flex: 1 1 auto;
+		}
 	}
 }
 
