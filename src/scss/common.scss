@@ -2,14 +2,18 @@
 .page {
 	&__main {
 		@include adaptiveValue("padding-top", 289, 90);
-		@include adaptiveValue("padding-bottom", 72, 45);/* +15px for purple decoration */
+		@include adaptiveValue("padding-bottom", 192, 45);/* +15px for purple decoration and gap*/
 	}
 
 		&__service {
-			@include adaptiveValue("padding-top", 72, 45);/* +15px for purple decoration */
+			@include adaptiveValue("padding-top", 114, 45);
 			@include adaptiveValue("padding-bottom", 72, 45);
 		}
 
+		&__portfolio {
+			@include adaptiveValue("padding-top", 114, 45);
+			@include adaptiveValue("padding-bottom", 72, 45);
+		}
 }
 
 
