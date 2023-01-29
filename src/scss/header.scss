@@ -5,19 +5,37 @@
   top: 0;
   left: 0;
   z-index: 100;
+	min-height: rem(40);
+	@include adaptiveValue("padding-top", 37, 8);
+	@include adaptiveValue("padding-bottom", 37, 8);
+	transition: all 0.3s ease 0s;
+
+	&._header-scroll {
+		background-color: #b4a1ff98;;
+		padding-top: rem(22);
+		padding-bottom: rem(22);
+
+		@media (max-width:$tablet){
+			padding-top: rem(13);
+			padding-bottom: rem(13);
+		}
+
+		@media (max-width:$mobile){
+			padding-top: rem(10);
+			padding-bottom: rem(10);
+		}
+
+		@media (max-width:$mobileSmall){
+			padding-top: rem(6);
+			padding-bottom: rem(6); 
+		}
+	}
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: rem(15);
-    min-height: rem(50);
-		@include adaptiveValue("padding-top", 37, 8);
-		@include adaptiveValue("padding-bottom", 37, 8);
-
-    @media (max-width:$mobile) {
-      min-height: rem(50);
-    }
   }
 
   &__logo {
@@ -42,7 +60,7 @@
   &__button {
     padding: rem(15) rem(24);
     border: rem(1) solid #F1F1F1;
-		background-color: #fff;
+		background-color: transparent;
     border-radius: rem(8);
     font-weight: 500;
     font-size: rem(14);
