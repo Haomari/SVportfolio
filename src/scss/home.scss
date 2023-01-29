@@ -200,7 +200,7 @@
 
   &__controls {
     display: flex;
-    gap: rem(16);
+		@include adaptiveValue("gap", 16, 8, 0, 767.98, 320);
   }
 
   &__arrow {
@@ -208,8 +208,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: rem(40);
-    height: rem(40);
+		@include adaptiveValue("width", 40, 30, 0, 767.98, 320);
+		@include adaptiveValue("height", 40, 30, 0, 767.98, 320);
     background-color: #EAE6FE;
 		transition: background-color 0.3s ease 0s;
     border-radius: rem(16);
@@ -220,6 +220,10 @@
 
 		&:hover {
 			background-color: #d8d0fd;
+		}
+
+		&:active {
+			background-color: #9791b3;
 		}
   }
 
