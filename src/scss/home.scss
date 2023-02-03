@@ -70,15 +70,22 @@
       transform: rotate(-9.55deg);
     }
 
-    & img:last-child {
-			overflow: hidden;
+		&::before {
+			content: '';
       position: absolute;
-      left: 41.12%;
-      right: -59.65%;
-      bottom: 47.81%;
-    }
+      top: 0;
+      left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("../img/main-section/lines.svg") top right no-repeat;
+			@include adaptiveValue("background-size", 200, 0, 0, 0, 350);
+			z-index: 2;
+			@media (max-width:$mobile){
+				z-index: -100;
+			}
+		}
 
-    & img:first-child {
+    & img {
       position: absolute;
       bottom: 0;
       left: 0;
