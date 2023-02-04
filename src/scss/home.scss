@@ -240,12 +240,10 @@
     }
   }
 
-  &__swiper {}
+  &__swiper {
+		user-select: none;
+	}
 }
-
-.swiper-button-prev {}
-
-.swiper-button-next {}
 
 .swiper-portfolio {
 
@@ -255,6 +253,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+		overflow: hidden;
   }
 
   &__item {
@@ -262,20 +261,22 @@
     max-width: rem(361);
     width: 100%;
     height: rem(402);
+		overflow: hidden;
   }
 
   &__image {
-
-
+		display: block;
+		overflow: hidden;
+		border-radius: rem(8);
+		&:hover img{
+			transform: scale(1.1);
+		}
     img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-
+			max-width: 100%;
       border-radius: rem(8);
-      overflow: hidden;
+			transition: transform 0.3s ease 0s;
+			z-index: -1;
+
     }
   }
 
@@ -286,15 +287,16 @@
     bottom: 0;
     right: 0;
     background-color: #fff;
-    border-width: 0px 1px 1px 1px;
+/*     border-width: 0px rem(1) rem(1) rem(1);
     border-style: solid;
     border-color: #F5F5F5;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px rem(8) rem(8); */
     z-index: 2;
   }
 
   &__lable {
     font-family: 'Plus Jakarta Sans';
+		cursor: default;
     font-weight: 500;
     font-size: rem(16);
     line-height: math.div(20, 16);
@@ -314,9 +316,24 @@
     line-height: math.div(15, 12);
     padding: rem(3) rem(8);
     border: 1px solid #F1F1F1;
+		cursor: default;
   }
 
-  &__link {}
+  &__link {
+		&:hover{
+			&::before{
+				color: $purpleColor;
+			}
+		}
+		&::before{
+			content: "\e900";
+			@extend %ic;
+			display: block;
+
+			font-size: rem(8);
+			transition: color 0.3s ease 0s;
+		}
+	}
 }
 
 .swiper {}

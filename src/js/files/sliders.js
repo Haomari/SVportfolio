@@ -49,10 +49,11 @@ function initSliders() {
 			
 			// Эффекты
 			effect: 'fade',
-			autoplay: {
+/* 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
-			},
+				pauseOnMouseEnter: true,
+			}, */
 			
 
 			// Пагинация
