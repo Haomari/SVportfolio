@@ -116,7 +116,7 @@
 //====================================================================================================
 
 .service-section {
-  background-color: #FBFBFB;
+  background-color: $greyBackgroundColor;
 
   &__container {}
 
@@ -369,14 +369,20 @@
 //====================================================================================================
 
 .career-section {
+	background-color: $greyBackgroundColor;
 
   &__container {
+		min-height: rem(360);
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
     justify-content: start;
     @include adaptiveValue("column-gap", 145, 30);
     @include adaptiveValue("row-gap", 95, 20);
+		@media (max-width:$mobile){
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+		}
   }
 
   &__title {}
@@ -385,6 +391,10 @@
     align-self: center;
     grid-column: 2;
     grid-row: 1/3;
+		@media (max-width:$mobile){
+			grid-column: 1;
+			grid-row: 3;
+		}
   }
 
   &__navigation {}
@@ -395,6 +405,9 @@
   display: flex;
   flex-direction: column;
   @include adaptiveValue("gap", 9, 5);
+	@media (max-width:$mobile){
+		display: block;
+	}
 
   &__title {
     padding: rem(14) rem(24);
@@ -405,6 +418,12 @@
     justify-content: space-between;
     transition: all 0.6s ease 0s;
     border-radius: rem(8);
+		@media (max-width:$mobile){
+			background-color: $greyBackgroundColor;
+			width: 100%;
+			position: relative;
+			z-index: 2;
+		}
 
     &:hover {
       background-color: rgb(245, 235, 255);
@@ -419,27 +438,78 @@
       transition: all 0.6s ease 0s;
       color: #fff;
       opacity: 0;
+			@media (max-width:$mobile){
+				opacity: 1;
+				color: $purpleColor;
+			}
     }
 
     &._tab-active {
       color: $purpleColor;
       margin-left: rem(8);
+			@media (max-width:$mobile){
+				margin-left: rem(0);
+			}
 
       &::before {
         opacity: 1;
         color: $purpleColor;
+				@media (max-width:$mobile){
+					transform: rotate(90deg);
+				}
       }
     }
   }
 }
 
-.content-career {
 
-  &__body {}
+[hidden] {}
+
+.content-career {
+  position: relative;
+
+
+  &__body {
+		max-height: rem(360);
+    overflow-y: auto;
+    transition-property: opacity, transform;
+    transition-duration: 0.9s, 0.9s;
+    transition-delay: 0s;
+    transition-timing-function: ease, ease-out;
+    opacity: 1;
+    transform: rotate(0);
+    transform: scale(1);
+		padding-right: rem(10);
+		@media (max-width:$mobile){
+			position: relative;
+			margin: rem(10) rem(0);
+			padding-right: rem(20);
+			background-color: #f9f7ff;
+			z-index: 0;
+		}
+
+    &[hidden] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      cursor: none;
+      z-index: -1;
+
+      transform: rotate(120deg) scale(0.5);
+      opacity: 0;
+      transition: all 0s ease 0s;
+      display: block;
+    }
+  }
 
   &__header {
     border-bottom: rem(1) solid #F1F1F1;
-    ;
+		@media (max-width:$mobile){
+			margin-left: rem(15);
+		}
   }
 
   &__title {
@@ -492,23 +562,26 @@
     font-size: rem(16);
     line-height: math.div(19, 16);
     color: $greyColor;
-		display: flex;
-		align-items: center;
-		gap: rem(18);
+    display: flex;
+    align-items: center;
+    gap: rem(18);
+		@media (max-width:$mobile){
+			gap: rem(8);
+		}
 
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 16, 13);
     }
 
-		&::before{
-			content:'';
-			display: block;
-			width: rem(10);
-			height: rem(2);
-			background-color: #D9D9D9;
-		}
+    &::before {
+      content: '';
+      display: block;
+      width: rem(10);
+      height: rem(2);
+      background-color: #D9D9D9;
+    }
   }
 }
 
-  //====================================================================================================
-  //====================================================================================================
+//====================================================================================================
+//====================================================================================================

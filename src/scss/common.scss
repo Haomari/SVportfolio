@@ -7,17 +7,17 @@
 
 		&__service {
 			@include adaptiveValue("padding-top", 114, 45);
-			@include adaptiveValue("padding-bottom", 72, 45);
+			@include adaptiveValue("padding-bottom", 184, 45);
 		}
 
 		&__portfolio {
-			@include adaptiveValue("padding-top", 114, 45);
-			@include adaptiveValue("padding-bottom", 72, 45);
+			@include adaptiveValue("padding-top", 113, 45);
+			@include adaptiveValue("padding-bottom",176, 45);
 		}
 
 		&__career {
-			@include adaptiveValue("padding-top", 114, 45);
-			@include adaptiveValue("padding-bottom", 72, 45);
+			@include adaptiveValue("padding-top", 104, 45);
+			@include adaptiveValue("padding-bottom", 122, 45);
 		}
 }
 
