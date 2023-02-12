@@ -103,7 +103,6 @@
 .social-main-section {
 
   &__item {
-    font-size: rem(24);
     @include adaptiveValue("font-size", 24, 18);
     transition: color 0.3s ease 0s;
 
@@ -369,20 +368,21 @@
 //====================================================================================================
 
 .career-section {
-	background-color: $greyBackgroundColor;
+  background-color: $greyBackgroundColor;
 
   &__container {
-		min-height: rem(360);
+    min-height: rem(360);
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
     justify-content: start;
     @include adaptiveValue("column-gap", 145, 30);
     @include adaptiveValue("row-gap", 95, 20);
-		@media (max-width:$mobile){
-			grid-template-columns: 1fr;
-			grid-template-rows: auto auto auto;
-		}
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
   }
 
   &__title {}
@@ -391,10 +391,11 @@
     align-self: center;
     grid-column: 2;
     grid-row: 1/3;
-		@media (max-width:$mobile){
-			grid-column: 1;
-			grid-row: 3;
-		}
+
+    @media (max-width:$mobile) {
+      grid-column: 1;
+      grid-row: 3;
+    }
   }
 
   &__navigation {}
@@ -405,9 +406,10 @@
   display: flex;
   flex-direction: column;
   @include adaptiveValue("gap", 9, 5);
-	@media (max-width:$mobile){
-		display: block;
-	}
+
+  @media (max-width:$mobile) {
+    display: block;
+  }
 
   &__title {
     padding: rem(14) rem(24);
@@ -418,12 +420,13 @@
     justify-content: space-between;
     transition: all 0.6s ease 0s;
     border-radius: rem(8);
-		@media (max-width:$mobile){
-			background-color: $greyBackgroundColor;
-			width: 100%;
-			position: relative;
-			z-index: 2;
-		}
+
+    @media (max-width:$mobile) {
+      background-color: $greyBackgroundColor;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
 
     &:hover {
       background-color: rgb(245, 235, 255);
@@ -438,25 +441,28 @@
       transition: all 0.6s ease 0s;
       color: #fff;
       opacity: 0;
-			@media (max-width:$mobile){
-				opacity: 1;
-				color: $purpleColor;
-			}
+
+      @media (max-width:$mobile) {
+        opacity: 1;
+        color: $purpleColor;
+      }
     }
 
     &._tab-active {
       color: $purpleColor;
       margin-left: rem(8);
-			@media (max-width:$mobile){
-				margin-left: rem(0);
-			}
+
+      @media (max-width:$mobile) {
+        margin-left: rem(0);
+      }
 
       &::before {
         opacity: 1;
         color: $purpleColor;
-				@media (max-width:$mobile){
-					transform: rotate(90deg);
-				}
+
+        @media (max-width:$mobile) {
+          transform: rotate(90deg);
+        }
       }
     }
   }
@@ -470,7 +476,7 @@
 
 
   &__body {
-		max-height: rem(360);
+    max-height: rem(360);
     overflow-y: auto;
     transition-property: opacity, transform;
     transition-duration: 0.9s, 0.9s;
@@ -479,14 +485,15 @@
     opacity: 1;
     transform: rotate(0);
     transform: scale(1);
-		padding-right: rem(10);
-		@media (max-width:$mobile){
-			position: relative;
-			margin: rem(10) rem(0);
-			padding-right: rem(20);
-			background-color: #f9f7ff;
-			z-index: 0;
-		}
+    padding-right: rem(10);
+
+    @media (max-width:$mobile) {
+      position: relative;
+      margin: rem(10) rem(0);
+      padding-right: rem(20);
+      background-color: #f9f7ff;
+      z-index: 0;
+    }
 
     &[hidden] {
       position: absolute;
@@ -507,9 +514,10 @@
 
   &__header {
     border-bottom: rem(1) solid #F1F1F1;
-		@media (max-width:$mobile){
-			margin-left: rem(15);
-		}
+
+    @media (max-width:$mobile) {
+      margin-left: rem(15);
+    }
   }
 
   &__title {
@@ -565,9 +573,10 @@
     display: flex;
     align-items: center;
     gap: rem(18);
-		@media (max-width:$mobile){
-			gap: rem(8);
-		}
+
+    @media (max-width:$mobile) {
+      gap: rem(8);
+    }
 
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 16, 13);
@@ -582,6 +591,113 @@
     }
   }
 }
+
+
+//====================================================================================================
+
+
+.blog-section {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    align-self: center;
+    @include adaptiveValue("margin-bottom", 144, 40);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    gap: rem(15);
+		column-gap: rem(30);
+
+    @media (max-width:$mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    max-width: rem(361);
+  }
+}
+
+.item-blog {
+
+  &__image {
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    border-width: 0 rem(1) rem(1) rem(1);
+    border-style: solid;
+    border-color: #F1F1F1;
+    border-radius: 0 0 rem(8) rem(8);
+		padding:rem(0) rem(16);
+  }
+
+  &__title {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: math.div(24, 16);
+    color: $mainColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: math.div(15, 12);
+    color: $greyColor;
+    background-color: $greyBackgroundColor;
+    padding: rem(4) rem(8);
+    border-radius: rem(4);
+
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__text {
+    font-size: rem(16);
+    line-height: math.div(32, 16);
+    color: $greyColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(42);
+    }
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(17, 14);
+    color: $greyColor;
+    max-width: rem(119);
+    margin: 0 auto;
+    margin-bottom: rem(24);
+		transition: color 0.3s ease 0s;
+
+		&:hover{
+			color: $purpleColor;
+		}
+  }
+}
+
 
 //====================================================================================================
 //====================================================================================================
