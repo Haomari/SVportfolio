@@ -614,8 +614,9 @@
     row-gap: rem(20);
     column-gap: rem(15);
 
-    @media (max-width:$mobile) {
+    @media (max-width:$tablet) {
       flex-wrap: wrap;
+			justify-content: space-evenly;
     }
   }
 
