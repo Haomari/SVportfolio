@@ -34,6 +34,11 @@
 			@include adaptiveValue("padding-top", 104, 104);
 			@include adaptiveValue("padding-bottom", 122, 45);
 		}
+
+		&__questions {
+			@include adaptiveValue("padding-top", 104, 104);
+			@include adaptiveValue("padding-bottom", 122, 45);
+		}
 }
 
 

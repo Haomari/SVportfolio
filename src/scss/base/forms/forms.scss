@@ -1,19 +1,74 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	&__row {
+/* 	display: flex;
+	flex-direction: column; */
+  position: relative;
+  max-width: rem(600);
+
+  &__input {
+    background: #FFFFFF;
+		color: $greyColor;
+    width: 100%;
+    height: rem(48);
+    padding: rem(0) rem(24);
+    border-radius: rem(8);
+		font-size: rem(14);
+		line-height: math.div( 17, 14);
+
+		&._form-error{
+			color: red;
+			&::placeholder{
+				color: red;
+			}
+		}
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__input-big {
+		padding: rem(16) rem(24);
+		height: rem(189);
+		resize: none;
+		&:not(:last-child) {
+      margin-bottom: rem(48);
+    }
 	}
-	&__column {
+
+  &__button {
+		width: 100%;
+		text-align: center;
+		font-size: rem(14);
+		line-height: math.div( 17, 14);
+		font-weight: 500;
+		color: #F5F3FE;
+		background-color: $purpleColor;
+		padding: rem(16) rem(0);
+		border-radius: rem(8);
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				background-color: #685dda;
+			}
+			&:active{
+				background-color: #453ca8;
+			}
+		}
 	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
+
+  &__error {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		color: red;
+		font-size: 16px;
+		margin-top: rem(10);
+		padding-left: rem(26);
 	}
 }
+
 //</FORM>
 
 // <BUTTONS>
