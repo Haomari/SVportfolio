@@ -469,8 +469,6 @@
 }
 
 
-[hidden] {}
-
 .content-career {
   position: relative;
 
@@ -997,14 +995,28 @@
 		font-weight: 500;
 		font-size: rem(16);
 		line-height: math.div( 19, 16);
+
 	}
 
 	&__text {
 		color: $greyColor;
 		font-size: rem(14);
 		line-height: math.div( 24, 14);
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover){
+			&:hover{
+				color: $purpleColor;
+
+				& .questions-section__icon img {
+					transform: rotate(40deg);
+				}
+			}
+		}
 	}
 }
-
+/* .questions-section__text:hover,.questions-section__icon img{
+	transform: rotate(40deg);
+} */
 //====================================================================================================
 //====================================================================================================
