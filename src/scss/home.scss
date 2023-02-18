@@ -973,6 +973,14 @@
 		&:not(:last-child) {
 			margin-bottom: rem(48);
 		}
+
+		&:first-child ._hover img{
+			animation: pin 0.8s infinite linear;
+		}
+
+		&:last-child ._hover img{
+			animation: mail 0.8s infinite linear;
+		}
 	}
 
 	&__icon {
@@ -987,6 +995,10 @@
 		& img {
 			width: rem(24);
 			height: rem(24);
+		}
+
+		&._hover img {
+			animation: phone 0.8s infinite linear;
 		}
 	}
 
@@ -1015,8 +1027,6 @@
 		}
 	}
 }
-/* .questions-section__text:hover,.questions-section__icon img{
-	transform: rotate(40deg);
-} */
+
 //====================================================================================================
 //====================================================================================================

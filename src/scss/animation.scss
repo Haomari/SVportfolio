@@ -1,0 +1,57 @@
+@keyframes phone {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pin {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(0, rem(2));
+  }
+
+  50% {
+    transform: translate(0);
+  }
+
+  75% {
+    transform: translate(0, rem(-3));
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes mail {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(0, rem(1));
+  }
+
+  50% {
+    transform: translate(0);
+  }
+
+  75% {
+    transform: translate(0, rem(-1));
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
