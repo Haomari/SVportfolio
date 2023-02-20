@@ -11,33 +11,33 @@
 		}
 
 		&__portfolio {
-			@include adaptiveValue("padding-top", 113, 45);
+			@include adaptiveValue("padding-top", 104, 45);
 			@include adaptiveValue("padding-bottom",176, 45);
 		}
 
 		&__career {
 			@include adaptiveValue("padding-top", 104, 45);
-			@include adaptiveValue("padding-bottom", 122, 45);
+			@include adaptiveValue("padding-bottom", 126, 45);
 		}
 
 		&__blog {
-			@include adaptiveValue("padding-top", 104, 104);
-			@include adaptiveValue("padding-bottom", 122, 45);
+			@include adaptiveValue("padding-top", 144, 45);
+			@include adaptiveValue("padding-bottom", 181, 45);
 		}
 
 		&__testimonials {
-			@include adaptiveValue("padding-top", 104, 104);
-			@include adaptiveValue("padding-bottom", 122, 45);
+			@include adaptiveValue("padding-top", 104, 45);
+			@include adaptiveValue("padding-bottom", 153, 45);
 		}
 
 		&__learning {
-			@include adaptiveValue("padding-top", 104, 104);
-			@include adaptiveValue("padding-bottom", 122, 45);
+			@include adaptiveValue("padding-top", 105, 45);
+			@include adaptiveValue("padding-bottom", 224, 45);
 		}
 
 		&__questions {
-			@include adaptiveValue("padding-top", 104, 104);
-			@include adaptiveValue("padding-bottom", 122, 45);
+			@include adaptiveValue("padding-top", 104, 45);
+			@include adaptiveValue("padding-bottom", 134, 45);
 		}
 }
 

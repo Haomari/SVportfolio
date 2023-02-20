@@ -36,7 +36,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 40,
 			autoHeight: true,
 			speed: 800,
 
@@ -48,8 +48,8 @@ function initSliders() {
 
 			
 			// Эффекты
-			effect: 'fade',
-/* 			autoplay: {
+/* 			effect: 'fade',
+			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 				pauseOnMouseEnter: true,
@@ -81,10 +81,16 @@ function initSliders() {
 			// Брейкпоинты
 			
 			breakpoints: {
-				320: {
+				300: {
+					spaceBetween: 40,
+					slidesPerView: 1,
+				},
+				410: {
+					spaceBetween: 0,
 					slidesPerView: 1,
 				},
 				800: {
+					spaceBetween: 0,
 					slidesPerView: 2,
 				},
 				992: {
@@ -94,6 +100,7 @@ function initSliders() {
 					slidesPerView: 3,
 				},
 				1268: {
+					spaceBetween: 0,
 					slidesPerView: 3,
 				},
 			},

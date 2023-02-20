@@ -259,16 +259,20 @@
   }
 
   &__item {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
     position: relative;
     max-width: rem(361);
     width: 100%;
     height: rem(402);
+		border-radius: rem(8);
   }
 
   &__image {
-    display: block;
-    overflow: hidden;
-    border-radius: rem(8);
+		position: relative;
+		z-index: 1;
+		padding-bottom: 82.1727019499%;
 
     &:hover img {
       transform: scale(1.08);
@@ -292,28 +296,24 @@
     }
 
     img {
-      max-width: 100%;
-      border-radius: rem(8);
+			position: absolute;width: 100%;height: 100%;left: 0;
+			object-position: top;
+			object-fit: cover;
       transition: transform 1s ease 0s;
       opacity: 1;
-      z-index: -1;
-
     }
   }
 
   &__item-bottom {
-    position: absolute;
-    width: 100.5%;
     height: 26.6169154%;
-    bottom: -1.0px;
-    right: -0.8px;
     background-color: #fff;
     border-width: 0px rem(1) rem(1) rem(1);
     border-style: solid;
     border-color: #F5F5F5;
+		// border-color: rgb(0, 0, 0);
     border-radius: 0px 0px rem(8) rem(8);
     z-index: 2;
-  }
+	}
 
   &__lable {
     font-family: 'Plus Jakarta Sans';
