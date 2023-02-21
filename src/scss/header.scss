@@ -5,34 +5,25 @@
   top: 0;
   left: 0;
   z-index: 100;
-	min-height: rem(40);
-	@include adaptiveValue("padding-top", 37, 8);
-	@include adaptiveValue("padding-bottom", 37, 8);
-	transition: all 0.3s ease 0s;
+	display: flex;
+	align-items: flex-end;
+	@include adaptiveValue("min-height", 82, 65, 2, 0, 767.98);
+	@include adaptiveValue("min-height", 63, 50, 3, 767.98, 320);
+	transition-property: padding-bottom, background-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
 
 	&._header-scroll {
-		background-color: #b4a1ff98;;
-		padding-top: rem(22);
-		padding-bottom: rem(22);
+		background-color: #b4a1ffc7;;
+		@include adaptiveValue("padding-bottom", 16.5, 8, 2, 0, 767.98);
+		@include adaptiveValue("padding-bottom", 11, 4.5, 3, 767.98, 320);
 
-		@media (max-width:$tablet){
-			padding-top: rem(13);
-			padding-bottom: rem(13);
-		}
-
-		@media (max-width:$mobile){
-			padding-top: rem(10);
-			padding-bottom: rem(10);
-		}
-
-		@media (max-width:$mobileSmall){
-			padding-top: rem(6);
-			padding-bottom: rem(6); 
-		}
 	}
 
   &__container {
     display: flex;
+		flex: 1 1 auto;
     align-items: center;
     justify-content: space-between;
     gap: rem(15);
