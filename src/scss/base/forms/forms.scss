@@ -15,12 +15,19 @@
     border-radius: rem(8);
 		font-size: rem(14);
 		line-height: math.div( 17, 14);
+		transition: border 0.3s ease 0s;
+		border: rem(1) solid rgb(255, 255, 255);
+
 
 		&._form-error{
 			color: red;
 			&::placeholder{
 				color: red;
 			}
+		}
+
+		&:focus {
+			border: rem(1) solid $purpleColor;
 		}
 
     &:not(:last-child) {
@@ -63,7 +70,7 @@
 		top: 100%;
 		left: 0;
 		color: red;
-		font-size: 16px;
+		font-size: rem(16);
 		margin-top: rem(10);
 		padding-left: rem(26);
 	}

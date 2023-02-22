@@ -1,3 +1,43 @@
 //====================================================================================================
+.footer {
+  @include adaptiveValue("padding-top", 88, 30);
+  @include adaptiveValue("padding-bottom", 88, 30);
 
+  &__container {}
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: rem(32);
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__item {
+    width: rem(24);
+    height: rem(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(20);
+    color: $greyColor;
+		transition: color 0.3s ease 0s;
+		
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpleColor;
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: rem(14);
+    line-height: math.div(17, 14);
+    color: $greyColor;
+
+  }
+}
 //====================================================================================================

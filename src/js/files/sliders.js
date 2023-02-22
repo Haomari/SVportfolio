@@ -48,12 +48,12 @@ function initSliders() {
 
 			
 			// Эффекты
-/* 			effect: 'fade',
+			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 				pauseOnMouseEnter: true,
-			}, */
+			},
 			
 
 			// Пагинация
@@ -89,7 +89,7 @@ function initSliders() {
 					spaceBetween: 0,
 					slidesPerView: 1,
 				},
-				800: {
+				768: {
 					spaceBetween: 0,
 					slidesPerView: 2,
 				},

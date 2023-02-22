@@ -232,9 +232,11 @@
       transform: rotate(180deg);
     }
 
-    &:hover {
+    @media (any-hover: hover){
+			&:hover{
       background-color: #d8d0fd;
-    }
+			}
+		}
 
     &:active {
       background-color: #9791b3;
@@ -336,7 +338,7 @@
     font-size: rem(12);
     line-height: math.div(15, 12);
     padding: rem(3) rem(8);
-    border: 1px solid #F1F1F1;
+    border: rem(1) solid #F1F1F1;
     cursor: default;
   }
 
@@ -623,15 +625,14 @@
 
   &__item {
     max-width: rem(361);
+		border-radius: rem(9);
+		overflow: hidden;
   }
 }
 
 .item-blog {
 
   &__image {
-    &:not(:last-child) {
-      margin-bottom: rem(16);
-    }
 
     img {
       max-width: 100%;
@@ -642,8 +643,12 @@
     border-width: 0 rem(1) rem(1) rem(1);
     border-style: solid;
     border-color: #F1F1F1;
-    border-radius: 0 0 rem(8) rem(8);
+    border-radius: 0 0 rem(9) rem(9);
     padding: rem(0) rem(16);
+
+		&:not(:first-child) {
+			padding-top: rem(16);
+		}
   }
 
   &__title {
@@ -689,8 +694,7 @@
     font-size: rem(14);
     line-height: math.div(17, 14);
     color: $greyColor;
-    max-width: rem(119);
-    margin: 0 auto;
+		text-align: center;
     margin-bottom: rem(24);
     transition: color 0.3s ease 0s;
 
@@ -743,6 +747,7 @@
 
     img {
       max-width: 100%;
+			border-radius: 50%;
     }
   }
 
@@ -1033,49 +1038,6 @@
   }
 }
 
-//====================================================================================================
-
-.footer {
-  @include adaptiveValue("padding-top", 88, 30);
-  @include adaptiveValue("padding-bottom", 88, 30);
-
-  &__container {}
-
-  &__social {
-    display: flex;
-    justify-content: center;
-    gap: rem(32);
-
-    &:not(:last-child) {
-      margin-bottom: rem(24);
-    }
-  }
-
-  &__item {
-    width: rem(24);
-    height: rem(24);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: rem(20);
-    color: $greyColor;
-		transition: color 0.3s ease 0s;
-		
-    @media (any-hover: hover) {
-      &:hover {
-        color: $purpleColor;
-      }
-    }
-  }
-
-  &__copyright {
-    text-align: center;
-    font-size: rem(14);
-    line-height: math.div(17, 14);
-    color: $greyColor;
-
-  }
-}
 
 //====================================================================================================
 //====================================================================================================
